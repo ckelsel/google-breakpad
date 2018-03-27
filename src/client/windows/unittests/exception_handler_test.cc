@@ -41,7 +41,7 @@
 #include "client/windows/crash_generation/crash_generation_server.h"
 #include "client/windows/handler/exception_handler.h"
 #include "client/windows/unittests/dump_analysis.h"  // NOLINT
-#include "common/windows/string_utils-inl.h"
+#include "common/windows/string_utils.cc"
 #include "google_breakpad/processor/minidump.h"
 
 namespace testing {

@@ -39,7 +39,7 @@
 
 #include "client/windows/common/auto_critical_section.h"
 #include "common/scoped_ptr.h"
-#include "common/windows/guid_string.h"
+#include "common/windows/guid_string.cc"
 
 using std::wstring;
 

@@ -581,7 +581,7 @@
           '-fvisibility-inlines-hidden',
         ],
         'ldflags': [
-          '-pthread', '-Wl,-z,noexecstack',
+          '-pthread',
         ],
         'scons_variable_settings': {
           'LIBPATH': ['$LIB_DIR'],
@@ -659,7 +659,7 @@
               # information in STABS format for breakpad's dumpsyms.
             ],
             'ldflags': [
-              '-rdynamic',  # Allows backtrace to resolve symbols.
+#'-rdynamic',  # Allows backtrace to resolve symbols.
             ],
           },
           'Release_Base': {
