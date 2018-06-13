@@ -41,14 +41,14 @@ def checkout_deps(basepath):
             if url.find('svn') >= 0:
                 system('git svn clone -q %s %s -r %s' % (url, path, rev))
             else:
-                system('git clone -n %s %s' % (url, path))
+                system('ALL_PROXY=socks5://127.0.0.1:1080 git clone -n %s %s' % (url, path))
                 system('cd %s; git reset --hard %s' % (path, rev))
         else:
             if url.find('svn') >= 0:
                 system('cd %s; git svn fetch -q -r %s' % (path, rev))
                 system('cd %s; git reset --hard $(git svn find-rev r%s)' % (path, rev))
             else:
-                system('cd %s; git fetch %s' % (path, url))
+                system('cd %s; ALL_PROXY=socks5://127.0.0.1:1080 git fetch %s' % (path, url))
                 system('cd %s; git reset --hard %s' % (path, rev))
 
         # and recurse
